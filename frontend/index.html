@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <!-- Container for forms -->
+    <div class="forms-container">
+        <!-- Form for Adding a Task -->
+        <form id="taskForm" class="form">
+            <h2>Add Task</h2>
+            <label for="courseId">Course ID:</label>
+            <input type="text" id="courseId" name="courseId" required>
+
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" required>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" required>
+
+            <label for="details">Details:</label>
+            <textarea id="details" name="details"></textarea>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Form for Retrieving Tasks -->
+        <form id="retrieveForm" class="form">
+            <h2>Retrieve Tasks</h2>
+            <label for="retrieveCourseId">Course ID:</label>
+            <input type="text" id="retrieveCourseId" name="retrieveCourseId" required>
+
+            <button type="submit">Get Tasks</button>
+            
+            <!-- Container for displaying tasks -->
+            <div id="tasksList">
+                
+            </div>
+        </form>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
