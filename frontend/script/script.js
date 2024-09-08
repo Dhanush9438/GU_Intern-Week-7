@@ -9,7 +9,7 @@ document.getElementById('taskForm').addEventListener('submit', function(event) {
         details: document.getElementById('details').value
     };
 
-    fetch('http://localhost:3000/tasks', {
+    fetch('https://gu-intern-week-7.onrender.com/tasks', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ document.getElementById('retrieveForm').addEventListener('submit', async functio
     const courseId = document.getElementById('retrieveCourseId').value;
 
     try {
-        const response = await fetch(`http://localhost:3000/courses/${courseId}/tasks`);
+        const response = await fetch(`https://gu-intern-week-7.onrender.com/courses/${courseId}/tasks`);
         
         if (!response.ok) {
             const errorData = await response.json();
@@ -72,7 +72,7 @@ document.getElementById('tasksList').addEventListener('click', async function(ev
         const taskId = event.target.getAttribute('data-task-id');
 
         try {
-            const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+            const response = await fetch(`https://gu-intern-week-7.onrender.com/tasks/${taskId}`, {
                 method: 'DELETE'
             });
 
